@@ -17,7 +17,7 @@ class BinaryHeap:
         if idx == 0:
             return
         parent = (idx - 1) // 2
-        if self.heap[idx].priority < self.heap[parent].priority:  # Min-heap (nejnižší priorita nahoře)
+        if self.heap[idx].priority < self.heap[parent].priority:  # Min-heap (nejnižší priorita nahoře) vs Max-heap (nejvyšší priorita nahoře)
             self.heap[idx], self.heap[parent] = self.heap[parent], self.heap[idx]
             self.heap_check_up(parent)
 
